@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,20 +13,49 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Sz-V4-Vu4">
+                                <rect key="frame" x="16" y="82" width="408" height="380"/>
+                                <viewLayoutGuide key="safeArea" id="Eka-rd-3sy"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            </view>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXI-vk-nrn">
+                                <rect key="frame" x="16" y="482" width="408" height="420"/>
+                                <viewLayoutGuide key="safeArea" id="aYo-jd-x2A"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eXI-vk-nrn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="HUH-rQ-4vD"/>
+                            <constraint firstItem="eXI-vk-nrn" firstAttribute="top" secondItem="3Sz-V4-Vu4" secondAttribute="bottom" constant="20" id="R27-iz-HPP"/>
+                            <constraint firstItem="eXI-vk-nrn" firstAttribute="height" secondItem="3Sz-V4-Vu4" secondAttribute="height" multiplier="1.10526" id="V72-Ym-xIS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Sz-V4-Vu4" secondAttribute="trailing" constant="16" id="W5Z-s6-AzA"/>
+                            <constraint firstItem="eXI-vk-nrn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Xbn-xc-LoT"/>
+                            <constraint firstItem="3Sz-V4-Vu4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="f3d-ZW-xcP"/>
+                            <constraint firstItem="eXI-vk-nrn" firstAttribute="top" secondItem="3Sz-V4-Vu4" secondAttribute="bottom" constant="20" id="fsA-Lx-3TL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eXI-vk-nrn" secondAttribute="trailing" constant="16" id="rkf-MO-H3Z"/>
+                            <constraint firstItem="3Sz-V4-Vu4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uwR-22-etT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-291" y="27"/>
+            <point key="canvasLocation" x="-147.27272727272728" y="-16.317991631799163"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
