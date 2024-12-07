@@ -16,46 +16,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Sz-V4-Vu4">
-                                <rect key="frame" x="16" y="82" width="408" height="380"/>
-                                <viewLayoutGuide key="safeArea" id="Eka-rd-3sy"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                            </view>
-                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXI-vk-nrn">
-                                <rect key="frame" x="16" y="482" width="408" height="420"/>
-                                <viewLayoutGuide key="safeArea" id="aYo-jd-x2A"/>
-                                <color key="backgroundColor" systemColor="tintColor"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, world!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SMj-u9-OjV">
+                                <rect key="frame" x="16" y="174" width="408" height="58.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkp-Pp-DtF">
+                                <rect key="frame" x="115" y="641.66666666666663" width="210" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.68748866369999995" blue="0.73999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="203" id="cV8-E5-Pp5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Show Greating">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="greatingButtonDidtapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pd4-Mm-o3K"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eXI-vk-nrn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="HUH-rQ-4vD"/>
-                            <constraint firstItem="eXI-vk-nrn" firstAttribute="top" secondItem="3Sz-V4-Vu4" secondAttribute="bottom" constant="20" id="R27-iz-HPP"/>
-                            <constraint firstItem="eXI-vk-nrn" firstAttribute="height" secondItem="3Sz-V4-Vu4" secondAttribute="height" multiplier="1.10526" id="V72-Ym-xIS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Sz-V4-Vu4" secondAttribute="trailing" constant="16" id="W5Z-s6-AzA"/>
-                            <constraint firstItem="eXI-vk-nrn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Xbn-xc-LoT"/>
-                            <constraint firstItem="3Sz-V4-Vu4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="f3d-ZW-xcP"/>
-                            <constraint firstItem="eXI-vk-nrn" firstAttribute="top" secondItem="3Sz-V4-Vu4" secondAttribute="bottom" constant="20" id="fsA-Lx-3TL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eXI-vk-nrn" secondAttribute="trailing" constant="16" id="rkf-MO-H3Z"/>
-                            <constraint firstItem="3Sz-V4-Vu4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uwR-22-etT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fkp-Pp-DtF" secondAttribute="bottom" multiplier="4:3" id="7h8-Gr-A4E"/>
+                            <constraint firstItem="SMj-u9-OjV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GUB-D1-LAh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SMj-u9-OjV" secondAttribute="trailing" constant="16" id="LO4-Eo-nMx"/>
+                            <constraint firstItem="Fkp-Pp-DtF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ckJ-pz-s48"/>
+                            <constraint firstItem="SMj-u9-OjV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="112" id="gHd-s0-Lux"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greatingButton" destination="Fkp-Pp-DtF" id="m5v-8h-spv"/>
+                        <outlet property="greatingLabel" destination="SMj-u9-OjV" id="iwR-jE-7Mg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-147.27272727272728" y="-16.317991631799163"/>
+            <point key="canvasLocation" x="463.63636363636368" y="-140.58577405857741"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
